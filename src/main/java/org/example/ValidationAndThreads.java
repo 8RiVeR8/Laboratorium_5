@@ -16,7 +16,7 @@ public class ValidationAndThreads{
         int startIndex = 0;
         CyclicBarrier barrier = new CyclicBarrier(numberOfThreads);
         ArrayList<Color> color = new ArrayList<>();
-        color.add(Color.BLACK);
+        color.add(Color.PINK);
         color.add(Color.ORANGE);
         color.add(Color.BLUE);
         color.add(Color.RED);

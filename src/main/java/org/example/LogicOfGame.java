@@ -30,6 +30,7 @@ public class LogicOfGame implements Runnable{
                 barrier.await();
                 game.PanelChanging(newGameBoard, starColumn, endColumn, color);
                 Thread.sleep(1700);
+                barrier.await();
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f53395c-31aa-4e67-a639-8cf04c233e31" name="Changes" comment="Skonczone bez kolorow">
+    <list default="true" id="6f53395c-31aa-4e67-a639-8cf04c233e31" name="Changes" comment="Skonczone">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/GUIBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/GUIBoard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/LogicOfGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/LogicOfGame.java" afterDir="false" />
@@ -73,7 +73,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702567255660</updated>
       <workItem from="1702567258315" duration="1605000" />
-      <workItem from="1702644042521" duration="24692000" />
+      <workItem from="1702644042521" duration="25324000" />
     </task>
     <task id="LOCAL-00001" summary="Prawie gotowe">
       <created>1702758847970</created>
@@ -89,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702801993116</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Skonczone">
+      <created>1702802749991</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702802749991</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,6 +105,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Prawie gotowe" />
     <MESSAGE value="Skonczone bez kolorow" />
-    <option name="LAST_COMMIT_MESSAGE" value="Skonczone bez kolorow" />
+    <MESSAGE value="Skonczone" />
+    <option name="LAST_COMMIT_MESSAGE" value="Skonczone" />
   </component>
 </project>

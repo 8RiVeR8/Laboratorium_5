@@ -1,6 +1,8 @@
 package org.example;
 
 import javax.swing.*;
+import javax.swing.border.Border;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 
 public class GUIBoard extends JFrame {
@@ -18,7 +20,7 @@ public class GUIBoard extends JFrame {
         this.board = new int[rows][columns];
 
         setTitle("Game of Life");
-        setSize(1000, 550);
+        setSize(1000, 700);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         setLayout(new GridLayout(rows, columns));
@@ -27,6 +29,10 @@ public class GUIBoard extends JFrame {
             for (int j=0; j<columns; j++){
                 JPanel panel = new JPanel();
                 panel.setBackground(Color.WHITE);
+
+                Border border = new LineBorder(Color.BLACK, 1);
+                panel.setBorder(border);
+
                 panels[i][j] = panel;
                 add(panel);
                 board[i][j] = 0;
@@ -34,9 +40,8 @@ public class GUIBoard extends JFrame {
         }
         setVisible(true);
 
-
         for (int i=0; i<numberOfCoordinate; i++){
-            panels[coordinates[i][0]][coordinates[i][1]].setBackground(Color.BLACK);
+            panels[coordinates[i][0]][coordinates[i][1]].setBackground(Color.DARK_GRAY);
             board[coordinates[i][0]][coordinates[i][1]] = 1;
         }
     }
