@@ -4,10 +4,10 @@ import javax.swing.*;
 import java.awt.*;
 
 public class GUIBoard extends JFrame {
-    private int rows;
-    private int columns;
-    private int iterations;
-    private int numberOfCoordinate;
+    private final int rows;
+    private final int columns;
+    private final int iterations;
+    private final int numberOfCoordinate;
     int[][] board;
     JPanel[][] panels;
     public GUIBoard(int rows, int columns, int iterations, int numberOfCoordinate,int [][] coordinates) {
