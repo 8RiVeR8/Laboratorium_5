@@ -41,11 +41,11 @@ public class GUIBoard extends JFrame {
         }
     }
 
-    public synchronized void PanelChanging(int [][] newGameBoard, int starColumn, int endColumn){
+    public synchronized void PanelChanging(int [][] newGameBoard, int starColumn, int endColumn, Color color){
         for (int i = 0; i < rows; i++){
             for (int j = starColumn; j <= endColumn; j++){
                 board[i][j] = newGameBoard[i][j];
-                panels[i][j].setBackground((board[i][j] == 1) ? Color.BLACK : Color.WHITE);
+                panels[i][j].setBackground((board[i][j] == 1) ? color : Color.WHITE);
             }
         }
     }

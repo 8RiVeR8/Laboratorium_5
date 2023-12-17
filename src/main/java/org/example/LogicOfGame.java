@@ -1,4 +1,5 @@
 package org.example;
+import java.awt.*;
 import java.util.concurrent.CyclicBarrier;
 
 public class LogicOfGame implements Runnable{
@@ -7,11 +8,13 @@ public class LogicOfGame implements Runnable{
     private final int endColumn;
     private final CyclicBarrier barrier;
     private final GUIBoard game;
-    public LogicOfGame(int starColumn, int endColumn, CyclicBarrier barrier, GUIBoard game) {
+    private final Color color;
+    public LogicOfGame(int starColumn, int endColumn, CyclicBarrier barrier, GUIBoard game, Color color) {
         this.starColumn = starColumn;
         this.endColumn = endColumn;
         this.barrier = barrier;
         this.game = game;
+        this.color = color;
     }
     @Override
     public void run() {
@@ -25,7 +28,7 @@ public class LogicOfGame implements Runnable{
                 int [][] newGameBoard = new int[game.getRows()][game.getColumns()];
                 GameRule(newGameBoard);
                 barrier.await();
-                game.PanelChanging(newGameBoard, starColumn, endColumn);
+                game.PanelChanging(newGameBoard, starColumn, endColumn, color);
                 Thread.sleep(1700);
             } catch (Exception e) {
                 throw new RuntimeException(e);

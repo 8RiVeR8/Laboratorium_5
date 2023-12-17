@@ -1,5 +1,7 @@
 package org.example;
 
+import java.awt.*;
+import java.util.ArrayList;
 import java.util.concurrent.CyclicBarrier;
 
 public class ValidationAndThreads{
@@ -13,6 +15,12 @@ public class ValidationAndThreads{
         int howMuch = columns / numberOfThreads;
         int startIndex = 0;
         CyclicBarrier barrier = new CyclicBarrier(numberOfThreads);
+        ArrayList<Color> color = new ArrayList<>();
+        color.add(Color.BLACK);
+        color.add(Color.ORANGE);
+        color.add(Color.BLUE);
+        color.add(Color.RED);
+        color.add(Color.GREEN);
 
         System.out.println("# " + numberOfThreads + " threads, column - based partitioning");
 
@@ -24,7 +32,7 @@ public class ValidationAndThreads{
                 overflow -= 1;
             }
 
-            Thread newThread = new Thread(new LogicOfGame(startIndex, endIndex, barrier, game));
+            Thread newThread = new Thread(new LogicOfGame(startIndex, endIndex, barrier, game, color.get(i)));
             newThread.start();
 
             System.out.println("tid " + i + ": rows: 0:" + (rows - 1) + " (" + rows + ")" + " cols: " + startIndex + ":" + endIndex + " " + "(" + (endIndex - startIndex + 1) + ")" );
